@@ -3,10 +3,10 @@ import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
 import TypeIt from "typeit";
 
 const RULES = [
-  "any live cell with fewer than two live neighbors dies",
-  "any live cell with two or three live neighbors lives on to the next generation",
-  "any live cell with more than three live neighbors dies",
-  "any dead cell with exactly three live neighbors becomes a live cell"
+  "- any live cell with fewer than two live neighbors dies",
+  "- any live cell with two or three live neighbors lives on to the next generation",
+  "- any live cell with more than three live neighbors dies",
+  "- any dead cell with exactly three live neighbors becomes a live cell"
 ];
 
 const typeIt = new TypeIt("#rules", {
@@ -19,9 +19,9 @@ const typeIt = new TypeIt("#rules", {
 typeIt.go();
 
 const CELL_SIZE = 10;
-const GRID_COLOR = "#CCCCCC";
-const DEAD_COLOR = "#FFFFFF";
-const ALIVE_COLOR = "#000000";
+const GRID_COLOR = "#666";
+const DEAD_COLOR = "#000000";
+const ALIVE_COLOR = "#32CD32";
 
 const universe = Universe.new();
 const width = universe.width();
@@ -148,7 +148,7 @@ canvas.addEventListener("click", e => {
 
   const input = gliderInput();
 
-  if (input === "none") {
+  if (input === "cell") {
     universe.toggle_cell(row, col);
   } else {
     universe.draw_glider(row, col, input);

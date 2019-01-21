@@ -2,42 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello wasm-pack!</title>
-    <style>
-        body {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
-    </style>
+    <title>life</title>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    rules:
-    <div id="rules"></div>
-    <div class="button-container">
-      <button id="play-pause">play</button>
-      <button id="clear">clear</button>
-      <button id="random">random</button>
-    </div>
-    <div class="radio-container">
-      <input type="radio" name="glider" id="none" value="none" checked>
-      <label for="none">none</label>
-      <input type="radio" name="glider" id="north-west" value="north-west">
-      <label for="north-west">north-west</label>
-      <input type="radio" name="glider" id="north-east" value="north-east">
-      <label for="north-east">north-east</label>
-      <input type="radio" name="glider" id="south-west" value="south-west">
-      <label for="south-west">south-west</label>
-      <input type="radio" name="glider" id="south-east" value="south-east">
-      <label for="south-east">south-east</label>
+<div>
+    <div class="controls-n-rules">
+      rules
+      <div id="rules"></div>
+      controls
+      <div class="button-container">
+        <button id="play-pause">play</button>
+        <button id="clear">clear</button>
+        <button id="random">random</button>
+      </div>
+      toggle cell or glider
+      <div class="radio-container">
+        <input type="radio" name="glider" id="cell" value="cell" checked>
+        <label for="cell">cell</label>
+        <input type="radio" name="glider" id="north-west" value="north-west">
+        <label for="north-west">north-west</label>
+        <input type="radio" name="glider" id="north-east" value="north-east">
+        <label for="north-east">north-east</label>
+        <input type="radio" name="glider" id="south-west" value="south-west">
+        <label for="south-west">south-west</label>
+        <input type="radio" name="glider" id="south-east" value="south-east">
+        <label for="south-east">south-east</label>
+      </div>
     </div>
     <canvas id="game-of-life-canvas">lol what year is it 2005</canvas>
+</div>
     <script src="./bootstrap.js"></script>
   </body>
 </html>
