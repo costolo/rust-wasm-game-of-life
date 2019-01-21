@@ -154,7 +154,6 @@ canvas.addEventListener("click", e => {
     universe.draw_glider(row, col, input);
   }
 
-  drawGrid();
   drawCells();
 });
 
